@@ -2,7 +2,7 @@
 
 angular.module('portfolioSumanth')
   .controller('BlogCtrl', function ($scope) {
-    $scope.pageClass="blog-page";
+    $scope.pageClass='blog-page';
     $scope.awesomeThings = [
       {
         'title': 'AngularJS',

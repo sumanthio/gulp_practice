@@ -2,7 +2,7 @@
 
 angular.module('portfolioSumanth')
   .controller('MainCtrl', function ($scope) {
-    $scope.pageClass="main-page";
+    $scope.pageClass='main-page';
     $scope.awesomeThings = [
       {
         'title': 'AngularJS',

@@ -32,7 +32,6 @@ section.jumbotron {
   padding: 1px 30px;
   background-color: #5aadbb;
   text-align: center;
-
   color: white;
 }
 
@@ -46,22 +45,21 @@ section.jumbotron h1 {
 }
 
 .techs md-card {
-  width: 30%;
+  min-width: 30%;
 }
 
 .techs md-card img.pull-right {
   float: right;
-  width: 50px;
+  min-width: 50px;
 }
 
 /*Ng-view animations */
 
-.page {  bottom:0; position:absolute;  text-align:center;  top:0;  width:100%;  }
+.page {  bottom:0; position:absolute; top:0;  width:100%;  }
 
 .main-page      { background:#00D0BC; color:#00907c; }
 .blog-page     { background:#E59400; color:#a55400; }
 .work-page   { background:#ffa6bb; color:#9e0000; }
-.contact-page { background:#E59400; color:#a55400; }
 
 .ng-enter {  z-index: 8888;  }
 .ng-leave {  z-index: 9999;  }
