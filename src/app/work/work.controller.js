@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('portfolioSumanth')
-  .controller('MainCtrl', function ($scope) {
+  .controller('WorkCtrl', function ($scope) {
     $scope.awesomeThings = [
       {
         'title': 'AngularJS',

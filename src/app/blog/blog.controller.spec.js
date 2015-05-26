@@ -12,7 +12,7 @@ describe('controllers', function(){
   it('should define more than 5 awesome things', inject(function($controller) {
     expect(scope.awesomeThings).toBeUndefined();
 
-    $controller('ContactCtrl', {
+    $controller('BlogCtrl', {
       $scope: scope
     });
 
