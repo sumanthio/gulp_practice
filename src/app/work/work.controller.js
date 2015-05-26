@@ -2,6 +2,7 @@
 
 angular.module('portfolioSumanth')
   .controller('WorkCtrl', function ($scope) {
+    $scope.pageClass="work-page";
     $scope.awesomeThings = [
       {
         'title': 'AngularJS',

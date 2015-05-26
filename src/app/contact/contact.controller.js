@@ -2,6 +2,7 @@
 
 angular.module('portfolioSumanth')
   .controller('ContactCtrl', function ($scope) {
+    $scope.pageClass="contact-page";
     $scope.awesomeThings = [
       {
         'title': 'AngularJS',
