@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('portfolioSumanth', ['ngRoute', 'ngMaterial'])
-  .config(function ($routeProvider) {
+  .config(function ($routeProvider, $locationProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'app/main/main.html',
@@ -22,5 +22,7 @@ angular.module('portfolioSumanth', ['ngRoute', 'ngMaterial'])
       .otherwise({
         redirectTo: '/'
       });
+    $locationProvider.html5Mode(true);
+    $locationProvider.hashPrefix('!');
   })
 ;
