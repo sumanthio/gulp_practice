@@ -42,9 +42,28 @@
         </md-whiteframe>
       </div>
       <div flex="20">
-        <md-card ng-repeat="card in SocialCards">
-          <p><a ng-href="{{card.url}}" target="_blank">{{card.title}}</a></p>
-        </md-card>
+        <md-content layout="row" layout-align="center center">
+          <section>
+            <md-subheader class="md-primary">Unread Messages</md-subheader>
+            <md-list layout-padding>
+              <md-list-item class="md-2-line" ng-repeat="card in SocialCards">
+                <img ng-src="assets/images/{{card.logo}}" class="md-avatar face">
+                <div class="md-list-item-text">
+                  <h3>{{card.title}}</h3>
+                  <h4>{{card.title}}</h4>
+                </div>
+              </md-list-item>
+            </md-list>
+          </section>
+          </md-content>
+
+        <md-content>
+          <md-card ng-repeat="card in SocialCards" layout="row" layout-align="right right">
+            <img ng-src="assets/images/{{card.logo}}" class="md-avatar face">
+            <a ng-href="{{card.url}}" target="_blank">{{card.title}}</a>
+          </md-card>
+        </md-content>
+
       </div>
     </div>
 
