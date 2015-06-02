@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('portfolioSumanth', ['ngRoute', 'ngMaterial'])
+angular.module('portfolioSumanth', ['ngRoute', 'ngMaterial', 'ngMessages','firebase'])
   .config(function ($routeProvider, $locationProvider) {
     $routeProvider
       .when('/', {
@@ -25,5 +25,5 @@ angular.module('portfolioSumanth', ['ngRoute', 'ngMaterial'])
     $locationProvider.html5Mode(true);
     $locationProvider.hashPrefix('!');
   })
-  .constant('PORT_URL','https://sumanth.firebaseio.com/')
+  .constant('PORT_URL', 'https://sumanth.firebaseio.com/')
 ;

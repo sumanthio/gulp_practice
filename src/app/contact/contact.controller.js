@@ -1,7 +1,9 @@
 'use strict';
 
 angular.module('portfolioSumanth')
-  .controller('ContactCtrl', function ($scope) {
+  .controller('ContactCtrl', function ($scope, PORT_URL,$firebaseArray) {
+    var ref=new Firebase(PORT_URL+'/messages');
+    var messages=$firebaseArray(ref);
     $scope.pageClass='contact-page';
     $scope.awesomeThings = [
       {
@@ -41,4 +43,15 @@ angular.module('portfolioSumanth')
     angular.forEach($scope.awesomeThings, function(awesomeThing) {
       awesomeThing.rank = Math.random();
     });
+
+    $scope.sendTheMessage = function (messageData) {
+      messages.$add(messageData);
+      $scope.user.name = '';
+      $scope.user.email = '';
+      $scope.user.message = '';
+    };
+
+
+
+
   });

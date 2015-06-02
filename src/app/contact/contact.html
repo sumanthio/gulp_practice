@@ -23,19 +23,29 @@
               <div layout layout-sm="column">
                 <md-input-container flex>
                   <label>Name</label>
-                  <input ng-model="user.name">
+                  <input ng-model="user.name" name="username" required>
+                  <!--<div ng-messages="testForm.username.$error">
+                    <div ng-message="required">This is required.</div>
+                  </div>-->
                 </md-input-container>
                 <md-input-container flex>
                   <label>Email</label>
-                  <input ng-model="user.email">
+                  <input ng-model="user.email" name="emailField" type="email" required>
+                  <!--<div ng-messages="testForm.emailField.$error">
+                    <div ng-message="required">This is required.</div>
+                    <div ng-message="email">Enter a valid Email please.</div>
+                  </div>-->
                 </md-input-container>
               </div>
               <md-input-container flex>
                 <label>Message</label>
-                <textarea ng-model="user.message" columns="1" md-maxlength="140"></textarea>
+                <textarea name="message" ng-model="user.message" columns="1" md-maxlength="140" required></textarea>
+               <!-- <div ng-messages="testForm.message.$error">
+                  <div ng-message="required">This is required.</div>
+                </div>-->
               </md-input-container>
               <div layout="row" layout-align="center center">
-                <md-button class="md-raised md-primary">Send</md-button>
+                <md-button class="md-raised md-primary" ng-disabled="testForm.$invalid" ng-click="sendTheMessage(user)"> Send <i class="material-icons">check</i></md-button>
               </div>
             </form>
           </md-content>
