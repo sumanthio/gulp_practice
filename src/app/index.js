@@ -25,4 +25,5 @@ angular.module('portfolioSumanth', ['ngRoute', 'ngMaterial'])
     $locationProvider.html5Mode(true);
     $locationProvider.hashPrefix('!');
   })
+  .constant('PORT_URL','https://sumanth.firebaseio.com/')
 ;
