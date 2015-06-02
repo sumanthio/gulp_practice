@@ -4,12 +4,7 @@
     <header ng-include="'app/components/navbar/navbar.html'"></header>
 
     <section class="jumbotron">
-      <h1>'Allo, 'Allo!</h1>
-      <p class="lead">
-        <img src="assets/images/yeoman.png" alt="I'm Yeoman"><br>
-        Always a pleasure scaffolding your apps.
-      </p>
-      <p><a class="btn" ng-href="#">Splendid!</a></p>
+      <h1>Wanna Connect...?</h1>
     </section>
 
     <div layout="row" layout-align="center">
@@ -58,6 +53,7 @@
             <i class="material-icons md-48">face</i>
             <md-list layout-padding>
               <md-list-item class="md-2-line" ng-repeat="card in SocialCards">
+                <i class="material-icons">{{ card.logo }}</i>
                 <img ng-src="assets/images/{{card.logo}}" class="md-avatar face">
                 <div class="md-list-item-text">
                   <h3>{{card.title}}</h3>

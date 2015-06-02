@@ -22,22 +22,22 @@ angular.module('portfolioSumanth')
       {
         'title': 'Facebook',
         'url': 'https://www.facebook.com/sumanthz',
-        'logo': 'angular.png'
+        'logo': 'facebook'
       },
       {
         'title': 'Twitter',
         'url': 'https://twitter.com/SUM4NTH',
-        'logo': 'angular.png'
+        'logo': 'Twitter'
       },
       {
         'title': 'LinkedIn',
         'url': 'https://www.linkedin.com/in/sumanthz',
-        'logo': 'angular.png'
+        'logo': 'Linkedin'
       },
       {
         'title': 'Github',
         'url': 'https://github.com/sumanthio',
-        'logo': 'angular.png'
+        'logo': 'Github'
       }
     ];
     angular.forEach($scope.awesomeThings, function(awesomeThing) {
