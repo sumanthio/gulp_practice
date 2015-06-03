@@ -14,18 +14,17 @@
       <div flex="60">
         <md-whiteframe class="md-whiteframe-z5" layout layout-align="center center">
           <md-content layout-padding>
-            <form name="testForm">
               <div layout layout-sm="column">
                 <md-input-container flex>
                   <label>Name</label>
-                  <input ng-model="user.name" name="username" required>
+                  <input ng-model="user.name" name="username">
                   <!--<div ng-messages="testForm.username.$error">
                     <div ng-message="required">This is required.</div>
                   </div>-->
                 </md-input-container>
                 <md-input-container flex>
                   <label>Email</label>
-                  <input ng-model="user.email" name="emailField" type="email" required>
+                  <input ng-model="user.email" name="emailField">
                   <!--<div ng-messages="testForm.emailField.$error">
                     <div ng-message="required">This is required.</div>
                     <div ng-message="email">Enter a valid Email please.</div>
@@ -34,15 +33,11 @@
               </div>
               <md-input-container flex>
                 <label>Message</label>
-                <textarea name="message" ng-model="user.message" columns="1" md-maxlength="140" required></textarea>
-               <!-- <div ng-messages="testForm.message.$error">
-                  <div ng-message="required">This is required.</div>
-                </div>-->
+                <textarea name="message" ng-model="user.message" columns="1"></textarea>
               </md-input-container>
               <div layout="row" layout-align="center center">
-                <md-button class="md-raised md-primary" ng-disabled="testForm.$invalid" ng-click="sendTheMessage(user)"> Send <i class="material-icons">check</i></md-button>
+                <md-button class="md-raised md-primary" ng-hide="!user.name||!user.email||!user.message" ng-click="sendTheMessage()"> Send <i class="material-icons">check</i></md-button>
               </div>
-            </form>
           </md-content>
         </md-whiteframe>
       </div>

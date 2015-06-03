@@ -1,7 +1,6 @@
 'use strict';
 
-angular.module('portfolioSumanth')
-  .controller('MainCtrl', function ($scope) {
+app.controller('MainCtrl', function ($scope) {
     $scope.pageClass='main-page';
     $scope.awesomeThings = [
       {

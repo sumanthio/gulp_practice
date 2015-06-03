@@ -1,17 +1,20 @@
 'use strict';
 
-angular.module('portfolioSumanth')
-  .controller('ContactCtrl', function ($scope, PORT_URL,$firebaseArray) {
-    var ref=new Firebase(PORT_URL+'/messages');
-    var messages=$firebaseArray(ref);
-    $scope.pageClass='contact-page';
+app.controller('ContactCtrl', function ($scope, PORT_URL, $firebaseArray) {
+    $scope.pageClass = 'contact-page';
+
+    var ref = new Firebase(PORT_URL + '/messages');
+    var messages = $firebaseArray(ref);
+
+    $scope.user = null;
+
     $scope.awesomeThings = [
       {
         'title': 'AngularJS',
         'url': 'https://angularjs.org/',
         'description': 'HTML enhanced for web apps!',
         'logo': 'angular.png'
-      },{
+      }, {
         'title': 'AngularJS',
         'url': 'https://angularjs.org/',
         'description': 'HTML enhanced for web apps!',
@@ -40,18 +43,21 @@ angular.module('portfolioSumanth')
         'logo': 'Github'
       }
     ];
-    angular.forEach($scope.awesomeThings, function(awesomeThing) {
+    angular.forEach($scope.awesomeThings, function (awesomeThing) {
       awesomeThing.rank = Math.random();
     });
 
-    $scope.sendTheMessage = function (messageData) {
-      messages.$add(messageData);
-      $scope.user.name = '';
-      $scope.user.email = '';
-      $scope.user.message = '';
+    $scope.sendTheMessage = function () {
+      messages.$add($scope.user)
+        .then(function (snapshot) {
+          console.log(snapshot.key());
+          $scope.user = {
+            name:'',
+            email:'',
+            message:''
+          };
+        });
     };
-
-
 
 
   });
