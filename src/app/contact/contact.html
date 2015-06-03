@@ -7,28 +7,21 @@
       <h1>Wanna Connect...?</h1>
     </section>
 
-    <div layout="row" layout-align="center">
+    <div layout="row" layout-align="space-around center">
       <div flex="20">
         [flex offset="20"]
       </div>
       <div flex="60">
-        <md-whiteframe class="md-whiteframe-z5" layout layout-align="center center">
+        <md-whiteframe class="md-whiteframe-z5" layout="column" layout-align="space-around center">
           <md-content layout-padding>
               <div layout layout-sm="column">
                 <md-input-container flex>
                   <label>Name</label>
                   <input ng-model="user.name" name="username">
-                  <!--<div ng-messages="testForm.username.$error">
-                    <div ng-message="required">This is required.</div>
-                  </div>-->
                 </md-input-container>
                 <md-input-container flex>
                   <label>Email</label>
                   <input ng-model="user.email" name="emailField">
-                  <!--<div ng-messages="testForm.emailField.$error">
-                    <div ng-message="required">This is required.</div>
-                    <div ng-message="email">Enter a valid Email please.</div>
-                  </div>-->
                 </md-input-container>
               </div>
               <md-input-container flex>
@@ -42,7 +35,7 @@
         </md-whiteframe>
       </div>
       <div flex="20">
-        <md-content layout="row" layout-align="center center">
+       <!-- <md-content layout="row" layout-align="center center">
           <section>
             <md-subheader class="md-primary">Unread Messages</md-subheader>
             <i class="material-icons md-48">face</i>
@@ -57,10 +50,10 @@
               </md-list-item>
             </md-list>
           </section>
-          </md-content>
+          </md-content>-->
 
-        <md-content>
-          <md-card ng-repeat="card in SocialCards" layout="row" layout-align="right right">
+        <md-content layout="column" layout-align="space-around center">
+          <md-card ng-repeat="card in SocialCards">
             <img ng-src="assets/images/{{card.logo}}" class="md-avatar face">
             <a ng-href="{{card.url}}" target="_blank">{{card.title}}</a>
           </md-card>

@@ -160,7 +160,7 @@ section.jumbotron h1 {
 /*for form validation*/
 
 /* when hiding the picture */
-.ng-hide-add         { animation:5.5s flipOutX ease; }
+.ng-hide-add         { animation:0.5s flipOutX ease; }
 
 /* when showing the picture */
 .ng-hide-remove      { animation:1s flipInX ease; }
