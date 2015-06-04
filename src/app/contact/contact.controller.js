@@ -18,7 +18,7 @@ app.controller('ContactCtrl', function ($scope, PORT_URL, $firebaseArray) {
         'title': 'AngularJS',
         'url': 'https://angularjs.org/',
         'description': 'HTML enhanced for web apps!',
-        'logo': 'angular.png'
+        '': 'angular.png'
       }
     ];
     $scope.SocialCards = [

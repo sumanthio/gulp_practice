@@ -4,14 +4,14 @@
     <header ng-include="'app/components/navbar/navbar.html'"></header>
 
     <section class="jumbotron">
-      <h1>Wanna Connect...?</h1>
+      <h1>If it's not 2x, then you are not growing.</h1>
     </section>
 
-    <div layout="row" layout-align="space-around center">
-      <div flex="20">
+    <div layout="row" layout-md="column" layout-align="space-around center">
+      <div flex>
         [flex offset="20"]
       </div>
-      <div flex="60">
+      <div flex>
         <md-whiteframe class="md-whiteframe-z5" layout="column" layout-align="space-around center">
           <md-content layout-padding>
               <div layout layout-sm="column">
@@ -29,12 +29,12 @@
                 <textarea name="message" ng-model="user.message" columns="1"></textarea>
               </md-input-container>
               <div layout="row" layout-align="center center">
-                <md-button class="md-raised md-primary" ng-hide="!user.name||!user.email||!user.message" ng-click="sendTheMessage()"> Send <i class="material-icons">check</i></md-button>
+                <md-button class="md-raised md-primary" ng-hide="!user.name||!user.email||!user.message" ng-click="sendTheMessage()"> Send</md-button>
               </div>
           </md-content>
         </md-whiteframe>
       </div>
-      <div flex="20">
+      <div flex>
        <!-- <md-content layout="row" layout-align="center center">
           <section>
             <md-subheader class="md-primary">Unread Messages</md-subheader>
@@ -52,9 +52,9 @@
           </section>
           </md-content>-->
 
-        <md-content layout="column" layout-align="space-around center">
-          <md-card ng-repeat="card in SocialCards">
-            <img ng-src="assets/images/{{card.logo}}" class="md-avatar face">
+        <md-content>
+          <md-card layout="column" layout-align="space-around right" ng-repeat="card in SocialCards">
+            <i class="material-icons">book</i>
             <a ng-href="{{card.url}}" target="_blank">{{card.title}}</a>
           </md-card>
         </md-content>

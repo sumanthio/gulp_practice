@@ -1,6 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto+slab:400,700|Roboto:400,700,700italic,400italic);
 
-@font-face {
+/*@font-face {
   font-family: 'Material Icons';
   font-style: normal;
   font-weight: 400;
@@ -17,10 +17,13 @@
   display: inline-block;
   -webkit-font-feature-settings: 'liga';
   -webkit-font-smoothing: antialiased;
-}
+}*/
 
 html {
   font-family: 'Roboto', serif;
+}
+a{
+  color: #000000;
 }
 
 [layout=row] {
