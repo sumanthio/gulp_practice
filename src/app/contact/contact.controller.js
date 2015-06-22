@@ -16,6 +16,10 @@
 
     activate();
 
+    vm.sendMessage=function(data){
+      console.log(data);
+    };
+
     function activate() {
       getWebDevTec();
       $timeout(function() {

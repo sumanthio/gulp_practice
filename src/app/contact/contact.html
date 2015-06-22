@@ -1,34 +1,49 @@
 <div layout="vertical" layout-fill>
-
-  <md-content>
+  <md-content flex>
     <header>
-      <acme-navbar creationDate="contact.creationDate" />
+      <acme-navbar creationDate="contact.creationDate"/>
     </header>
-
-    <section class="jumbotron">
-      <h1>'Allo, 'Allo!</h1>
-      <p class="lead">
-        <img src="assets/images/yeoman.png" alt="I'm Yeoman"><br>
-        Always a pleasure scaffolding your apps.
-      </p>
-      <md-button class="md-raised animated infinite" ng-class="contact.classAnimation" ng-click="contact.showToastr()">Splendid Toastr</md-button>
-      <p>
-        With ♥ thanks to the contributions of<acme-malarkey extra-values="['Yeoman', 'Gulp', 'Angular']" />
-      </p>
-    </section>
-
-    <div class="techs" layout-align="center">
-      <md-card ng-repeat="awesomeThing in contact.awesomeThings | orderBy:'rank'">
-        <div class="thumbnail">
-          <img class="pull-right" ng-src="assets/images/{{ awesomeThing.logo }}" alt="{{ awesomeThing.title }}">
-          <div class="caption">
-            <h3>{{ awesomeThing.title }}</h3>
-            <p>{{ awesomeThing.description }}</p>
-            <p><a ng-href="{{ awesomeThing.url }}">{{ awesomeThing.url }}</a></p>
-          </div>
-        </div>
-      </md-card>
+    <div layout="row" layout-align="center center">
+      <h1>"Not 2x..? You are not growing at all."</h1>
     </div>
+
+    <div layout="row" layout-align="center center">
+      <div flex="20"></div>
+      <md-content flex="50" class="autoScroll">
+        <h3>Wanna connect..?</h3>
+        <md-input-container class="md-icon-float" >
+          <!-- Use floating label instead of placeholder -->
+          <label>Name</label>
+          <md-icon md-svg-src="img/icons/ic_person_24px.svg" class="name"></md-icon>
+          <input ng-model="user.name" type="text" ng-required="true">
+        </md-input-container>
+        <md-input-container class="md-icon-float">
+          <!-- Use floating placeholder instead of label -->
+          <md-icon md-svg-src="img/icons/ic_email_24px.svg" class="email"></md-icon>
+          <input ng-model="user.email" type="text" placeholder="Email" ng-required="true">
+        </md-input-container>
+        <md-input-container>
+          <md-icon md-svg-src="img/icons/ic_place_24px.svg" style="display:inline-block;"></md-icon>
+          <input ng-model="user.message" type="text" placeholder="Message" ng-required="true">
+        </md-input-container>
+        <section layout="row" layout-align="center center">
+          <md-button flex="60" class="md-raised md-primary" ng-click="contact.sendMessage(user)">Primary</md-button>
+        </section>
+      </md-content>
+      <div flex="30">
+      <md-whiteframe class="md-whiteframe-z5" layout layout-align="center center">
+        <md-content layout="column" layout-align="center center">
+          Hangout @
+          <md-card>Facebook</md-card>
+          <md-card>Twitter</md-card>
+          <md-card>Github</md-card>
+          <md-card>LinkedIn</md-card>
+          <md-card>Instagram</md-card>
+        </md-content>
+      </md-whiteframe>
+      </div>
+    </div>
+
   </md-content>
 
 </div>
