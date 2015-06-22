@@ -17,18 +17,20 @@
       </p>
     </section>
 
-    <div class="techs" layout-align="center">
-      <md-card ng-repeat="awesomeThing in blog.awesomeThings | orderBy:'rank'">
-        <div class="thumbnail">
-          <img class="pull-right" ng-src="assets/images/{{ awesomeThing.logo }}" alt="{{ awesomeThing.title }}">
-          <div class="caption">
-            <h3>{{ awesomeThing.title }}</h3>
-            <p>{{ awesomeThing.description }}</p>
-            <p><a ng-href="{{ awesomeThing.url }}">{{ awesomeThing.url }}</a></p>
-          </div>
-        </div>
-      </md-card>
+    <div layout="column" layout-align="center center">
+      <p flex="80">
+        Technically, I am a CS guy with 2 years of progressive experience in web making. Freelanced for a PR agency and built an internal chat system over LAN. Then began my journey
+        with <a href="http://www.fissionlabs.in" target="_blank">Fission Labs</a>. It's been a year quickly, but quite challenging though. Happened to experience the actual Bay area work culture and flow hacks.
+
+      //write about passionate things. key words
+      <p flex="70">
+        Not exactly a blog, this is just piece of feature I had an idea to add.
+        I write a lot though, it's been quiet a while actually. Used to write a lot when I was in college, which is like a while ago.
+        There were a couple of blogs, <a href="https://expressmuzic.wordpress.com" target="_blank">one</a> which I used to write music reviews and stuff. And the
+        <a href="http://strictlybtech.blogspot.in" target="_blank">other</a> is all about my philosphy and frustration
+      </p>
     </div>
+
   </md-content>
 
 </div>
