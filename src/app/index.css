@@ -24,15 +24,15 @@ html {
 }
 
 md-toolbar.md-default-theme {
-  background-color: black;
+  background-color: transparent;
 }
 
 section.jumbotron {
+  height:100%;
   margin-bottom: 30px;
   padding: 1px 30px;
   background-color: #5aadbb;
   text-align: center;
-
   color: white;
 }
 
