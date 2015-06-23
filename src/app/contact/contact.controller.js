@@ -6,7 +6,7 @@
     .controller('ContactController', ContactController);
 
   /** @ngInject */
-  function ContactController($timeout, webDevTec, toastr) {
+  function ContactController($timeout, webDevTec, portURL, toastr) {
     var vm = this;
 
     vm.awesomeThings = [];
@@ -14,6 +14,7 @@
     vm.classAnimation = '';
     vm.creationDate = 1434893262833;
     vm.showToastr = showToastr;
+    console.log(portURL);
 
     activate();
 

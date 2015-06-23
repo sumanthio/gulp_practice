@@ -1,31 +1,12 @@
 @import url(//fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,700,700italic,400italic);
 
-html {
-  font-family: 'Roboto Slab', serif;
-}
+html {  font-family: 'Roboto Slab', serif;  }
+[layout=row] {  flex-direction: row;  }
 
-[layout=row] {
-  flex-direction: row;
-}
-
-.browsehappy {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
-}
-
-.thumbnail {
-  height: 200px;
-}
-
-.thumbnail img.pull-right {
-  width: 50px;
-}
-
-md-toolbar.md-default-theme {
-  background-color: transparent;
-}
+.browsehappy {  margin: 0.2em 0;  background: #ccc;  color: #000;  padding: 0.2em 0;  }
+.thumbnail {  height: 200px;  }
+.thumbnail img.pull-right {  width: 50px;  }
+md-toolbar.md-default-theme {  background-color: transparent;  }
 
 section.jumbotron {
   height:100%;
@@ -36,30 +17,18 @@ section.jumbotron {
   color: white;
 }
 
-section.jumbotron h1 {
-  font-size: 3em;
-}
+section.jumbotron h1 {  font-size: 3em;  }
 
-.techs {
-  display: flex;
-  flex-flow: row wrap;
-}
-
-.techs md-card {
-  width: 30%;
-}
-
-.techs md-card img.pull-right {
-  float: right;
-  width: 50px;
-}
-
-
+.techs {  display: flex;  flex-flow: row wrap;  }
+.techs md-card {  width: 30%;  }
+.techs md-card img.pull-right {  float: right;  width: 50px;  }
 /*NG-VIEW animations*/
 
 .page {  bottom:0; position:absolute; top:0;  width:100%;  }
 
-.main-page      { background:#00D0BC; color:#00907c; }
+.main-page      { background: url("../assets/images/back1.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  background-size: cover;}
 .work-page   { background:#ffa6bb; color:#9e0000; }
 .blog-page     { background:#E59400; color:#a55400; }
 .contact-page   { background:#ffa6bb; color:#9e0000; }
