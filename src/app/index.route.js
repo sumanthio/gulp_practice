@@ -13,22 +13,26 @@
       .when('/', {
         templateUrl: 'app/main/main.html',
         controller: 'MainController',
-        controllerAs: 'main'
+        controllerAs: 'main',
+        animate:'main-page'
       })
       .when('/work', {
         templateUrl: 'app/work/work.html',
         controller: 'WorkController',
-        controllerAs: 'work'
+        controllerAs: 'work',
+        animate:'work-page'
       })
       .when('/blog', {
         templateUrl: 'app/blog/blog.html',
         controller: 'BlogController',
-        controllerAs: 'blog'
+        controllerAs: 'blog',
+        animate:'blog-page'
       })
       .when('/contact', {
         templateUrl: 'app/contact/contact.html',
         controller: 'ContactController',
-        controllerAs: 'contact'
+        controllerAs: 'contact',
+        animate:'contact-page'
       })
       .otherwise({
         redirectTo: '/'
