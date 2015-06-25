@@ -7,6 +7,6 @@
     .constant('malarkey', malarkey)
     .constant('toastr', toastr)
     .constant('moment', moment)
-    .constant('portURL','https://sumanth.firebaseio.com');
+    .constant('portURL', 'https://sumanth.firebaseio.com');
 
 })();

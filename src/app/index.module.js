@@ -2,6 +2,6 @@
   'use strict';
 
   angular
-    .module('portfolioSumanth', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngRoute', 'ngMaterial']);
+    .module('portfolioSumanth', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngRoute', 'ngMaterial', 'firebase']);
 
 })();

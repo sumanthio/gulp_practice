@@ -6,7 +6,7 @@
     .controller('ContactController', ContactController);
 
   /** @ngInject */
-  function ContactController($timeout, webDevTec, portURL, toastr) {
+  function ContactController($timeout, webDevTec, portURL, toastr, $firebaseArray, $mdToast) {
     var vm = this;
 
     vm.awesomeThings = [];
@@ -14,12 +14,26 @@
     vm.classAnimation = '';
     vm.creationDate = 1434893262833;
     vm.showToastr = showToastr;
-    console.log(portURL);
+    vm.user={};
 
     activate();
-
-    vm.sendMessage=function(data){
-      console.log(data);
+    var ref = new Firebase(portURL + '/messages/');
+    var messages = $firebaseArray(ref);
+    vm.sendMessage = function (data) {
+      messages.$add(data).then(function (snapshot) {
+        if(snapshot.key()){
+          vm.user = {
+            name:'',
+            email:'',
+            message:''
+          };
+        $mdToast.show($mdToast.simple()
+            .content('I will get you')
+            .position('top right')
+            .hideDelay(2000)
+        );
+        }
+      });
     };
 
     function activate() {

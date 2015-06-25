@@ -1,10 +1,10 @@
-<div layout="vertical" layout-fill>
+<div class="contact.pageClass" layout="vertical" layout-fill>
   <md-content flex>
     <header>
       <acme-navbar creationDate="contact.creationDate"/>
     </header>
     <div layout="row" layout-align="center center">
-      <h1>"Not 2x..? You are not growing at all."</h1>
+      <h1 class="md-display-3">"Not 2x..? You are not growing at all."</h1>
     </div>
 
     <div layout="row" layout-align="center center">
@@ -15,19 +15,19 @@
           <!-- Use floating label instead of placeholder -->
           <label>Name</label>
           <md-icon md-svg-src="img/icons/ic_person_24px.svg" class="name"></md-icon>
-          <input ng-model="user.name" type="text" ng-required="true">
+          <input ng-model="contact.user.name" type="text" ng-required="true">
         </md-input-container>
         <md-input-container class="md-icon-float">
           <!-- Use floating placeholder instead of label -->
           <md-icon md-svg-src="img/icons/ic_email_24px.svg" class="email"></md-icon>
-          <input ng-model="user.email" type="text" placeholder="Email" ng-required="true">
+          <input ng-model="contact.user.email" type="text" placeholder="Email" ng-required="true">
         </md-input-container>
         <md-input-container>
           <md-icon md-svg-src="img/icons/ic_place_24px.svg" style="display:inline-block;"></md-icon>
-          <input ng-model="user.message" type="text" placeholder="Message" ng-required="true">
+          <input ng-model="contact.user.message" type="text" placeholder="Message" ng-required="true">
         </md-input-container>
         <section layout="row" layout-align="center center">
-          <md-button flex="60" class="md-raised md-primary" ng-click="contact.sendMessage(user)">Primary</md-button>
+          <md-button flex="60" class="md-raised md-primary" ng-click="contact.sendMessage(contact.user)">Primary</md-button>
         </section>
       </md-content>
       <div flex="30">
