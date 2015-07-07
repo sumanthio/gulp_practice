@@ -190,3 +190,7 @@ section.jumbotron h1 {  font-size: 3em;  }
     opacity: 0;
   }
 }
+
+md-content{
+  background-color: transparent;
+}
