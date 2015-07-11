@@ -194,3 +194,9 @@ section.jumbotron h1 {  font-size: 3em;  }
 md-content{
   background-color: transparent;
 }
+
+.intro {
+  color: #ffffff;
+  background-color: rgba(69, 51, 68, 0.5);
+  padding: 20px;
+}
