@@ -19,6 +19,18 @@
     activate();
     var ref = new Firebase(portURL + '/messages/');
     var messages = $firebaseArray(ref);
+    vm.cards = [
+      {"link": "https://www.facebook.com/sumanthz",
+      "name": "facebook"},
+      {"link": "https://www.twitter.com/sum4nth",
+        "name": "twitter"},
+      {"link": "https://www.github.com/sumanthio",
+        "name": "github"},
+      {"link": "https://in.linkedin.com/in/sumanthz",
+        "name": "linkedin"},
+      {"link": "https://www.instagram.com/sum4nth",
+        "name": "instagram"}
+    ];
     vm.sendMessage = function (data) {
       messages.$add(data).then(function (snapshot) {
         if(snapshot.key()){

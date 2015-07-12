@@ -34,11 +34,10 @@
       <md-whiteframe class="md-whiteframe-z5" layout layout-align="center center">
         <md-content layout="column" layout-align="center center">
           Hangout @
-          <md-card>Facebook</md-card>
-          <md-card>Twitter</md-card>
-          <md-card>Github</md-card>
-          <md-card>LinkedIn</md-card>
-          <md-card>Instagram</md-card>
+          <md-card ng-repeat="card in contact.cards">
+            <a ng-href="{{card.link}}" target="_blank"><i class="fa fa-{{card.name}} fa-3x"></i></a>
+          </md-card>
+          <md-card><a href="https://www.quora.com/sumanth-pagidipalli" target="_blank"><i class="fa fa-fw fa-3x"><strong>Q</strong></i></a></md-card>
         </md-content>
       </md-whiteframe>
       </div>
