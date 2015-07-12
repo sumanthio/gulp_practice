@@ -195,8 +195,17 @@ md-content{
   background-color: transparent;
 }
 
+.work-card{
+  color:#ffffff;
+  background-color: rgba(69, 51, 68, 0.5);
+}
+
 .intro {
   color: #ffffff;
   background-color: rgba(69, 51, 68, 0.5);
   padding: 20px;
+}
+
+.img-circle{
+  border-radius: 50%;
 }
