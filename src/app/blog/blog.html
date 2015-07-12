@@ -17,19 +17,24 @@
       </p>
     </section>-->
 
-    <div layout="column" layout-align="center center">
-      <p flex="80">
-        Technically, I am a CS guy with 2 years of progressive experience in web making. Freelanced as a PHP dev for a PR agency. And then began my journey as a
-        UI Engineer, with <a href="http://www.fissionlabs.com" target="_blank">Fission Labs</a>. It's been a quick year, but quite challenging though. Happened to experience the actual Bay area work flow, culture and hacks.
-        On the other side of coin, I am a Keyboard artist and I freelance that too actually. About to start my Youtube career as a cover artist.
-      <p flex="70">
-        Not exactly a blog, this is just piece of feature I had an idea to add.
-        I write a lot though, it's been quiet a while actually. Used to write a lot when I was in college, which is like a while ago.
-        There were a couple of blogs, <a href="https://expressmuzic.wordpress.com" target="_blank">one</a> which I used to write music reviews and stuff. And the
-        <a href="http://strictlybtech.blogspot.in" target="_blank">other</a> is all about my philosophy and frustration
-      </p>
+    <div layout="row" layout-align="center center">
+      <md-card flex="65" class="intro">
+        <p>Not exactly a blog, this is just piece of idea, which I thought of adding later.
+          I write a lot though, it's been quite a while. Used to write a lot when I was in college, (PS: which is like a while ago).
+          There were a couple of blogs, <a href="https://expressmuzic.wordpress.com" target="_blank">one</a> which I used to write music reviews and stuff. And the
+          <a href="http://strictlybtech.blogspot.in" target="_blank">other</a> is all about my philosophy and frustration</p>
+      </md-card>
     </div>
+    <div layout="row" layout-align="space-around center">
+      <a flex ng-repeat="post in blog.posts" ng-href="{{post.link}}" target="_blank">
+        <md-card class="intro">
+          <h4 class="md-headling">{{post.title}}</h4>
+          <p>{{post.desc}}</p>
+        </md-card>
+      </a>
 
+
+    </div>
   </md-content>
 
 </div>
