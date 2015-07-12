@@ -26,10 +26,16 @@ section.jumbotron h1 {  font-size: 3em;  }
 
 .page {  bottom:0; position:absolute; top:0;  width:100%;  }
 
-.main-page      { background: url("../assets/images/back4.jpg") no-repeat center center fixed;
-  background-size: cover; }
-.work-page   { background: url("../assets/images/back5.jpg") no-repeat center center fixed;
-  background-size: cover; }
+.main-page {
+  background: url("../assets/images/back4.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.work-page {
+  background: url("../assets/images/back5.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
 .blog-page     { background:#E59400; color:#a55400; }
 .contact-page   { background:#ffa6bb; color:#9e0000; }
 
