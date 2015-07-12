@@ -36,7 +36,12 @@ section.jumbotron h1 {  font-size: 3em;  }
   background-size: cover;
 }
 
-.blog-page     { background:#E59400; color:#a55400; }
+.blog-page {
+  background: url("../assets/images/thumb1.jpg") no-repeat center center fixed;
+  background-size: cover;
+  /*background: linear-gradient(45deg, #f06, yellow);*/
+  min-height: 100%;
+}
 .contact-page   { background:#ffa6bb; color:#9e0000; }
 
 .ng-enter {  z-index: 8888;  }
