@@ -7,40 +7,33 @@
       <h1 class="md-display-3">"Not 2x..? You are not growing at all."</h1>
     </div>
 
-    <div layout="row" layout-align="center center">
-      <div flex="20"></div>
-      <md-content flex="50" class="autoScroll" style="color:#fff;">
+    <div layout="row" layout-sm="column" layout-align="center center" layout-align-sm="center center">
+      <md-content class="intro" flex="75" class="autoScroll" style="color:#fff;">
         <h3>Wanna connect..?</h3>
         <md-input-container class="md-icon-float">
           <label>Name</label>
-          <md-icon md-svg-src="img/icons/ic_person_24px.svg" class="name"></md-icon>
           <input ng-model="contact.user.name" type="text" ng-required="true">
         </md-input-container>
         <md-input-container class="md-icon-float">
           <!-- Use floating placeholder instead of label -->
-          <md-icon md-svg-src="img/icons/ic_email_24px.svg" class="email"></md-icon>
           <input ng-model="contact.user.email" type="text" placeholder="Email" ng-required="true">
         </md-input-container>
         <md-input-container>
-          <md-icon md-svg-src="img/icons/ic_place_24px.svg" style="display:inline-block;"></md-icon>
           <input ng-model="contact.user.message" type="text" placeholder="Message" ng-required="true">
         </md-input-container>
         <section layout="row" layout-align="center center">
-          <md-button flex="60" class="md-raised md-primary" ng-click="contact.sendMessage(contact.user)">Primary</md-button>
+          <md-button flex="60" class="md-raised md-primary" ng-click="contact.sendMessage(contact.user)">Send <i class="fa fa-correct"></i></md-button>
         </section>
       </md-content>
-      <div flex="10"></div>
-      <div flex="10">
-      <md-whiteframe class="md-whiteframe-z5 intro" layout layout-align="center center">
-        <md-content layout="column" layout-align="center center">
-          Hangout @
+      <div flex layout-sm="row" layout-align="end end" layout-align-sm="center center">
+        <md-content flex="20">
+          <h4>Hangout @</h4>
           <md-card ng-repeat="card in contact.cards">
             <a ng-href="{{card.link}}" target="_blank"><i class="fa fa-{{card.name}} fa-2x"></i></a>
           </md-card>
           <md-card><a href="https://www.quora.com/sumanth-pagidipalli" target="_blank"><i class="fa fa-quora fa-fw fa-2x"><strong>Q</strong></i></a></md-card>
         </md-content>
       </md-whiteframe>
-      </div>
     </div>
 
   </md-content>

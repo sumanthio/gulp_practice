@@ -6,7 +6,7 @@
     .controller('ContactController', ContactController);
 
   /** @ngInject */
-  function ContactController($timeout, webDevTec, portURL, toastr, $firebaseArray, $mdToast) {
+  function ContactController($timeout, webDevTec, portURL, toastr, $firebaseArray,$mdToast) {
     var vm = this;
 
     vm.awesomeThings = [];
@@ -15,13 +15,9 @@
     vm.creationDate = 1434893262833;
     vm.showToastr = showToastr;
     vm.user={};
-
-    activate();
-    var ref = new Firebase(portURL + '/messages/');
-    var messages = $firebaseArray(ref);
     vm.cards = [
       {"link": "https://www.facebook.com/sumanthz",
-      "name": "facebook"},
+        "name": "facebook"},
       {"link": "https://www.twitter.com/sum4nth",
         "name": "twitter"},
       {"link": "https://www.github.com/sumanthio",
@@ -31,9 +27,13 @@
       {"link": "https://www.instagram.com/sum4nth",
         "name": "instagram"}
     ];
+
+    activate();
+    var ref = new Firebase(portURL + '/messages/');
+    var messages = $firebaseArray(ref);
     vm.sendMessage = function (data) {
       messages.$add(data).then(function (snapshot) {
-        if(snapshot.key()){
+        if(2==2){
           vm.user = {
             name:'',
             email:'',
@@ -47,6 +47,12 @@
         }
       });
     };
+
+   /* vm.authObj.$authAnonymously().then(function(authData) {
+      console.log("Logged in as:", authData.uid);
+    }).catch(function(error) {
+      console.error("Authentication failed:", error);
+    });*/
 
     function activate() {
       getWebDevTec();

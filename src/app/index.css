@@ -330,6 +330,7 @@ md-content {
   background-color: rgba(69, 51, 68, 0.5);
   padding: 20px;
 }
+
 a .fa{
   width:50px;
   height:50px;
@@ -352,6 +353,7 @@ a .fa:hover{
   transform: scale(1.1);
 }
 
+a .fa-facebook-official{background-color:#ffffff !important;color:#3C599F !important;}
 .fa-facebook,.fa-facebook-square{background-color:#3C599F;}
 .fa-github,.fa-github-alt,.fa-github-square{background-color:#070709;}
 .fa-linkedin,.fa-linkedin-square{background: -webkit-linear-gradient(top, #009cda, #0073b2);}

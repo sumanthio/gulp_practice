@@ -21,14 +21,14 @@
     return directive;
 
     /** @ngInject */
-    function NavbarController(moment,$mdSidenav) {
+    function NavbarController(moment) {
       var vm = this;
-      vm.close = function () {
+     /* vm.close = function () {
         $mdSidenav('left').close()
           .then(function () {
             console.log('From the Navbar directive');
           });
-      };
+      };*/
       // "vm.creation" is avaible by directive option "bindToController: true"
       vm.relativeDate = moment(vm.creationDate).fromNow();
     }
