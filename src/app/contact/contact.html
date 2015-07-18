@@ -3,12 +3,13 @@
     <header>
       <acme-navbar creationDate="contact.creationDate"/>
     </header>
-    <div layout="row" layout-align="center center" class="intro">
-      <h1 class="md-display-3">"Not 2x..? You are not growing at all."</h1>
+    <div hide-sm layout="row" layout-align="center start" class="intro">
+      <h1 class="md-display-1">"Not 2x..? You are not growing at all."</h1>
     </div>
 
-    <div layout="row" layout-align="center center">
-      <md-content class="intro" flex class="autoScroll" style="color:#fff;">
+    <div layout-gt-sm="row" layout-align-gt-sm="center center" layout-sm="column" layout-align-sm="center center">
+      <div flex="10" hide-sm></div>
+      <md-content layout-fill flex class="intro" class="autoScroll" style="color:#fff;">
         <h3>Wanna connect..?</h3>
         <md-input-container>
           <input ng-model="contact.user.name" type="text" placeholder="Name" ng-required="true">
@@ -21,18 +22,18 @@
           <input ng-model="contact.user.message" type="text" placeholder="Message" ng-required="true">
         </md-input-container>
         <section layout="row" layout-align="center center">
-          <md-button flex="60" class="md-raised md-primary" ng-click="contact.sendMessage(contact.user)">Send <i class="fa fa-correct"></i></md-button>
+          <md-button flex="60" class="md-raised md-primary" ng-click="contact.sendMessage(contact.user)">Send <i
+            class="fa fa-correct"></i></md-button>
         </section>
       </md-content>
-      <div flex layout-sm="row" layout-align="end end" layout-align-sm="center center">
-        <md-content flex="20">
-          <h4>Hangout @</h4>
+      <div layout-gt-sm="column" layout-align-gt-sm="center center" layout-sm="row" layout-align-sm="start start">
+          <h4 hide-sm class="intro">Hangout @</h4>
           <md-card ng-repeat="card in contact.cards">
             <a ng-href="{{card.link}}" target="_blank"><i class="fa fa-{{card.name}} fa-2x"></i></a>
           </md-card>
-          <md-card><a href="https://www.quora.com/sumanth-pagidipalli" target="_blank"><i class="fa fa-quora fa-fw fa-2x"><strong>Q</strong></i></a></md-card>
-        </md-content>
-      </md-whiteframe>
+          <md-card><a href="https://www.quora.com/sumanth-pagidipalli" target="_blank"><i
+            class="fa fa-quora fa-fw fa-2x"><strong>Q</strong></i></a></md-card>
+      </div>
     </div>
 
   </md-content>

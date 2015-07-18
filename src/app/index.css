@@ -363,3 +363,13 @@ a .fa-facebook-official{background-color:#ffffff !important;color:#3C599F !impor
 .img-circle {
   border-radius: 50%;
 }
+
+a{
+  color:#bada55;
+  text-decoration: none;
+}
+
+a:hover {
+  cursor: pointer;
+  text-transform: uppercase;
+}
