@@ -18,23 +18,23 @@
     </section>-->
 
     <div layout="row" layout-align="center center">
-      <md-card flex="65" class="intro">
+      <md-card flex="65" flex-sm="90" class="intro">
         <p>Not exactly a blog, this is just piece of idea, which I thought of adding later.
           I write a lot though, it's been quite a while. Used to write a lot when I was in college, (PS: which is like a while ago).
           There were a couple of blogs, <a href="https://expressmuzic.wordpress.com" target="_blank">one</a> which I used to write music reviews and stuff. And the
           <a href="http://strictlybtech.blogspot.in" target="_blank">other</a> is all about my philosophy and frustration</p>
       </md-card>
     </div>
-    <div layout="row" layout-align="center center" layout-sm="column" layout-align-sm="center center">
-      <a flex ng-repeat="post in blog.posts" ng-href="{{post.link}}" target="_blank">
-        <md-card class="intro">
+
+    <div layout-gt-md="row" layout-align-gt-md="center center" layout-sm="column" layout-align-sm="space-between center">
+      <md-card class="intro" ng-repeat="post in blog.posts">
+        <a ng-href="{{post.link}}">
           <h4 class="md-headling">{{post.title}}</h4>
           <p>{{post.desc}}</p>
-        </md-card>
-      </a>
-
-
+        </a>
+      </md-card>
     </div>
+
   </md-content>
 
 </div>
