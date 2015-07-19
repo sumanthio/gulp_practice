@@ -11,20 +11,24 @@
       <div flex="10" hide-sm></div>
       <md-content layout-fill flex class="intro" class="autoScroll" style="color:#fff;">
         <h3>Wanna connect..?</h3>
-        <md-input-container>
-          <input ng-model="contact.user.name" type="text" placeholder="Name" ng-required="true">
-        </md-input-container>
-        <md-input-container>
-          <!-- Use floating placeholder instead of label -->
-          <input ng-model="contact.user.email" type="text" placeholder="Email" ng-required="true">
-        </md-input-container>
-        <md-input-container>
-          <input ng-model="contact.user.message" type="text" placeholder="Message" ng-required="true">
-        </md-input-container>
-        <section layout="row" layout-align="center center">
-          <md-button flex="60" class="md-raised md-primary" ng-click="contact.sendMessage(contact.user)">Send <i
-            class="fa fa-correct"></i></md-button>
-        </section>
+        <form name="contactForm" novalidate>
+          <md-input-container>
+            <input name="username" ng-model="contact.user.name" type="text" placeholder="Name" required>
+          </md-input-container>
+          <md-input-container>
+            <!-- Use floating placeholder instead of label -->
+            <input ng-model="contact.user.email" type="email" name="email" placeholder="Email" required>
+          </md-input-container>
+          <md-input-container>
+            <input ng-model="contact.user.message" type="text" name="message" placeholder="Message" required>
+          </md-input-container>
+          <section layout="row" layout-align="center center">
+            <md-button flex="60"
+                       ng-disabled="contactForm.username.$error.required || contactForm.email.$error.required ||contactForm.email.$error.email || contactForm.message.$error.required"
+                       class="md-raised md-primary" ng-click="contact.sendMessage(contact.user,contactForm)">Send<i class="fa fa-correct"></i></md-button>
+          </section>
+
+        </form>
       </md-content>
       <div layout-gt-sm="column" layout-align-gt-sm="center center" layout-sm="row" layout-align-sm="start start">
           <h4 hide-sm class="intro">Hangout @</h4>

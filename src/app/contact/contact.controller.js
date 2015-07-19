@@ -31,20 +31,22 @@
     activate();
     var ref = new Firebase(portURL + '/messages/');
     var messages = $firebaseArray(ref);
-    vm.sendMessage = function (data) {
+    vm.sendMessage = function (data,form) {
       messages.$add(data).then(function (snapshot) {
-        if(2==2){
+        if (form) {
+          form.$setPristine();
+          form.$setUntouched();
+        }
           vm.user = {
             name:'',
             email:'',
             message:''
           };
         $mdToast.show($mdToast.simple()
-            .content('I will get you')
-            .position('top right')
-            .hideDelay(2000)
+            .content('I will get you...!')
+            .position('bottom left')
+            .hideDelay(3000)
         );
-        }
       });
     };
 
