@@ -2,6 +2,7 @@
 
 html {
   font-family: 'Roboto Slab', serif;
+  font-size: 0.9em;
 }
 
 [layout=row] {
@@ -327,7 +328,7 @@ md-content {
 
 .intro {
   color: #ffffff;
-  background-color: rgba(69, 51, 68, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
   padding: 20px;
 }
 
@@ -364,8 +365,8 @@ a .fa-facebook-official{background-color:#ffffff !important;color:#3C599F !impor
   border-radius: 50%;
 }
 
-a {
-  color: #bada55;
+a{
+  color: darkgray;
   text-decoration: none;
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
@@ -397,9 +398,12 @@ a:before {
   transition-timing-function: ease-out;
 }
 a:hover, a:focus, a:active {
-  color: white;
+  color: #ffffff;
 }
 a:hover:before, .a:focus:before, .a:active:before {
   -webkit-transform: scale(0);
   transform: scale(0);
+}
+
+md-button:hover{
 }
